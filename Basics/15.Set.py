@@ -8,7 +8,7 @@ b) Unindexed : Since, Set items are unordered, so Sets doesnot have indexing.
 
 c) Unchangable/mmutable : Once a set is created, you cannot modify its existing items, but you can add new items to existing items or can remove existing items.
 
-d) Duplicates Not Allowed : Whenever we define any duplicate values set ignores it.
+d) Duplicates Not Allowed : Whenever we define any duplicate values set ignores it. i.e Every Elemeent must be unique in set, it canot be duplicates.
 
 e) Any Datatpe and Mix of Different Datattpes : We can define any type of datatypes to a set.
 

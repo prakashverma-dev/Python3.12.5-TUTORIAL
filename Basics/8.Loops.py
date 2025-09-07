@@ -143,7 +143,7 @@ for _ in range(11):
 
 # These keywords not used directly inside if-else statement untill it is not within any loops means when there is any if-else statments present within loop then we can use it otherwise not.
 
-# If break and continie keywords use outside of a loop, it will cause a compile-time error for the program.
+# If break and continue keywords use outside of a loop, it will cause a compile-time error for the program.
 
 # break : As soon as we face 'break' keyword inside any loop, then Exits the current loop immediately and move to the next line of code, regardless of loop condition getting True.
 # NOte : If there is two loops or multiple nested loops then it exits only the current loop means innermost enclosing loop only.
@@ -241,6 +241,16 @@ Note: remember to increment i, or else the loop will continue forever and termin
 initial_pw= ""
 while(initial_pw != "rowdy"):
   initial_pw = input("Enter the password : ")
+
+  
+password = "" # Initial Password
+while password != "Rowdy@123":
+    print("Wrong Password Entered...")
+    password = input("Enter the password : ")
+
+print("Successfully Loggined!") 
+    
+
 
 
 # 'break' Statement in While loop : - exits the current loop immediately and move to next line of code in program i.e outside of current loop. Ex:

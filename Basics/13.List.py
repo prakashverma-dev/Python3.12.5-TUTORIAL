@@ -49,14 +49,14 @@ print(type(arr))
 fruits = ["apples", "banana", 2, 3.4, True]
 print(fruits)
 print(type(fruits))
-print(len(fruits))
+print(len(fruits)) 
 
 #b) with empty list - Then later add the items using assignment operartor or list method.
 wow = [] 
 wow.append("w") # Wow[0] = "w"
 print(wow)
 
-# NOte : 'tuple' object does not support item assignment whereas 'list' item support item assignment.
+# NOte : 'list' object supports item assignment coz of 'mutuable' items(changable items) whereas 'tuple' object doesnot support item assignment coz tuple items is immutable i.e unchangable.
 
 #c) with list() constructor to convert any iterable object into list -
 wow2 = list((3,4,5))

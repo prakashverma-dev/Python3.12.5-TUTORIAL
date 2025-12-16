@@ -1,75 +1,7 @@
 '''
-# What is Array(Static Array) In Programming Language : -
-
-Array/Static Array : An Array can be defined as a storage or container or similar kind of data/items placed in the contiguous memory locations.
-
-Array stores only Hemogenous Elements in it.(Static Array)
-
-Note : Langaugages like C,C++,Java,C# etc. comes with Classic Fixed Sized Array i.e Static Array and We defined the above defination of Classic Array i.e Static Array.
-
-# An Array Can be of Two Type : -
-a) Static Array : It the array where size of array is fixed and depends upon user defined size of array. e.g: C,C++,Java,C# Provides Static Array.
-
-b) Dynamic Array : It is the array where size of array is not fixed, it expands or shrinks as per user size. Thus, User doesnot have to define any size of array here. e.g: Python, Javascrpt Provides inbuilt Dynamic Array.
 
 
-# HomoGeneous and Heterogenous Arrays : -
-a) HomoGeneous Array : It contains the elements of same datatype.
-b) Heterogeneous Array : It can contain the elements of mixed datatypes.
-
-#Properties : -
-
-i) Array is a linear data structure means items stores in linear-fashion.
-ii) Array Items stored in contiguous memory locations. so that our memory get used efficiently.
-iii) Array Stores only Homogenous Elements i.e one type of dataype element(either integer or float or string or boolean etc).
-iv) Indexing Based : 0,1,2,3,
-v) Items Mutabale
-vi) Ordered
-vii) Duplicates allowed.
-
-
-# Drawbacks/Disadvantage of Using Array(Static Array) : -
-
-i) Static Array have fixed size to store data.
-ii) Needs contigous memory.
-iii) Diffcult to insertion and deletion in static array.
-
-
-
-# Array Impletation in Python : Though Python doesnot have inbuilt Array but Python Provides list Datatype which works like an Array which is Dyanmic Array in nature.
-
-User-defined Array Can be Implement in Python with three ways -
-a) Using Class to define the custom array and its own properties 
-b) using Python 'array' module : to work with static Array
-c)  using NumPy Array 
-
-
-import array as arr
-
-myArr = arr.array('i', [2, 4,5 ])
-myArr2 = arr.array('d', [2.2, 4.5,5.5])
-myArr3 = arr.array('u', ["a", "c","b"])
-
-print(myArr, myArr2, myArr3)
-print(myArr.typecode)
-print(myArr2.typecode)
-print(myArr3.typecode)
-
-# Length of Array -
-print(len(myArr), len(myArr2), len(myArr3))
-
-
-import numpy as np
-
-myArr5 = np.array([4,5,6,"4"])
-print(myArr5)
-
-
-
--------------------------------------------------------
-
-
-# We can Perform some operarion on Each DataTpes or Data Struture : -
+# We can Perform some operarion on Each Data Struture : -
 
 myarr = [5,6,17,12,9]
 
@@ -106,7 +38,7 @@ iii) No of steps takes by a code to execute the operation, directly proportion t
 
 '''
 
-# Print Even Number from 1 to  Numbers -
+# Print Even Number from 1 to 10 Numbers -
 # Option1 : - Step Jump to 2 to print all even number[MOST TIME EFFICIENT]
 for even in range(2, 11, 2):
     print(even)
@@ -291,3 +223,39 @@ betweeen the O(1)   --- O(log n)   --- O (n)
 log 8 = 3(Steps) OR, log 16 = 4 (Steps, only 1 step increases)
 
 '''
+
+# Binary Search using Recursive function (Rather using Loop) : -
+
+# Note : Binary Search algorithm searches through a sorted array and returns the index of target value and returned -1 if target value is not found. We call binary(bi) search coz we divide the array in two parts from middle nearly equal.
+
+def binarySearchwithRecursive(myarr, target):
+    # steps = 0 # To calculate the no of steps for ananlysis time complexity.
+
+    start_index = 0 # lower_bound_index
+    end_index = len(myarr) - 1  # upper_bound_index
+
+    while start_index <= end_index :
+
+        steps += 1
+
+        mid_index = (start_index + end_index) // 2
+
+        if myarr[mid_index] == target :
+            
+            # print("No of steps for binary search :", steps)
+            return mid_index # Returned index where target value mactched with mid_index value.
+        
+        if myarr[mid_index] < target :
+            start_index =  mid_index + 1 # Shift start_index to one step ahead of mid_index
+        else:
+            end_index = mid_index - 1 # shift end_index to one step before of mid_index.
+
+    # print("No of steps for binary search :", steps)
+    return -1 # If target value not found, returned -1 index.
+
+mera_aarr = [3,4,5,23,27,33,46]            
+x = 0
+
+# print("Binary 
+# Search Result Index : ", binarySearch(mera_aarr, x))
+

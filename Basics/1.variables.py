@@ -1,29 +1,42 @@
-"""
 
 
-#Variables In Python : It is use to store data into computer memory.
+#Variables and their declarationns In Python : -
 
-Synatax : <variable_name> = <variable_value> 
+# Variables : In Programming, Variables are containers which are used to store some data to computer memory space randomly. Just Like In our kitchen we stores groceries in different conatainers.
 
-Python has no command for declaring a variable like other programming languages.
+# Each Containers or Variable Names have the memory locations allocated in our computer memory space which is randomly.
 
-a variable value can be changed with time,that can be updated later on.
 
-name = "Shradha"  -- variable = value
-age = 23
-age = 24
-price = 23.599
+# Any variable value can be changed with time, that can be updated with time.
 
-Here, a variable is a name given to a memory location in a program. 
+# Note : Python has no command for declaring a variable like other programming languages.
+
+# Variables can hold different datatypes data in it like string, float, number etc.
+
+# Variable Declaration Synatax :-
+#   <variable_name> = <variable_value> 
+
+
+# name = "Shradha"  --> variable = value
+# age = 23
+# age = 24
+# # price = 23.599
+
+# Here, a variable is a name given to a memory location in a program. 
+
+'''
+# Variables Memory Represenation : - Variables means memory locations given to our computer memory space randomly.
 
 MEMORY : [] []  [] [] []
          age       name
 
 Here, once we assign a varible value to a variable, then python assign its value to a random memory space in computer with variale name get stored/saved. Now, Untill we dont change that the value accross that variable name, every time we get the same value from saved memory in computer, whenver we call with same variable names. 
 
+
 # Changig value to memory location -
 name = "Shravya" ---> now at same memory location/variable name different value get saved.
 age = 23
+
 
 # Assigning Value to a variable/Assignment Rule or Operator : -
 
@@ -36,28 +49,17 @@ print(age2) # 23
 print(age) # 23 #orinal value remain same.
 
 
+# Variable Type In Python : Python is 'Dynamically Typed' language means we do not need to tell explicitally to the variable while declaring that which datatype we are going to store, python compiler automaticaly/implicitally (due to Dynamically Typed ) get recognized that user which type of data want to store in variable either float, integeer, string etc.  
 
-# Knowing Type of stored value i.e Datatpe using type() function -
+# Ex: In C-Progammig -
 
-name = "Shradha"
-age =  -25
-price = 25.99
-print (type(name) )
-print ( type( age) )
-print (type (price))
+#int x = 5   ---> here In c, we need to tell variable which kinda datatype we are going to store
 
 
-"""
+'''
 
 
-
-#Variables and their declarationns In Python : -
-
-# Variables : In Programming, Variables are containers which are used to store some data to computer memory space randomly.
-
-# Declaration Synatax :  <variable_name> = <variable_value> 
-
-# OR, Python allows us to Declare Many Values to Multiple Variables in one line:
+#Multi-Variable Declartin Syntax In Python :-  Python allows us to Declare Many Values to Multiple Variables in one line:
 
 # <var_name1> , <var_name2>, <var_name3>, so on. = <value1>, <value1>, <value1>, so on.
 x, y, z = "Orange", "Banana", "Cherry"
@@ -73,43 +75,15 @@ print(x)
 print(y)
 print(z)
 
-# Have You noticed, In Python, there is no keyword to declare a variable type, like other programming languages.
-
-# Ex: In C-Progammig -
-
-#int x = 5   ---> here In c, we need to tell variable which kinda datatype we are going to store
-
-# Note : Python is 'Dynamically Typed' language means we do not need to tell explicitally to the variable while declaring that which datatype we are going to store, python compiler automaticaly/implicitally (due to Dynamically Typed ) get recognized that user which type of data want to store in variable either float, integeer, string etc.  Ex:
-
-#Memory Represenation of variables : -
-
-# In Progamming, container means some memory space in the computer, where data get allocated randomly in any vacant space. [] [] []
-
-# Thus, Variables Points to some computer memory space or address of memory space.
-
-x = 5 #Here, python automatilly determines which datatype get stored in variale i.e integer, we didnot explicitally need not to specify like other some programming lang.
 
 
 
-x = 10 # this 'x' value get stored into memory space randomly in computer. which can be indentified with 'x' variable. or address of 10 value in memory space.
-
-# what if update the avlue -
-x = 10 # Now, 'x' location/address value in memory space get updated with new value.
-
-#  Note : In Porgaming, once we assign any value to a variable, then that variable allocates some random memory space in computer to store that value, untill user doesnot change or update.
-
-# store data can be different types which knwon as datatypes in programming languages.
-x = 5 # Integer datatypes
-y = "JOHn" # string
-z = 5.2 #float
-b = False #Boolean
 
 
+# Identifier : - In Programming Languages, Identifers can be variable names, function names, class names, and other names which needed to use to assign some value to it in programming.
 
-#Naming Rules For Identifier : - In Programming Languages, Identifers can be variable names, function names, class names, and other names which needed to use to assign something in python program.
+#Identifier Naming Rules : In every programming languages there are some common Naming rules for Indentifier(Variables etc.). In Python we have following Indefierfer Naming Rules  -- 
 
-
-# Some Common Rules for Naming These Indentifier/Variables in Python are -
 
 # NOte : Python is a case_sensitive language which means upper case and lower case characters are not same but different. THus, remeber to use variable name accordingly.
 
@@ -132,20 +106,32 @@ b = False #Boolean
 
 
 
+# store data can be different types which knwon as datatypes in programming languages. (5 dataype)
+x = 5 # Integer datatype
+y = "JOHn" # string datatype
+z = 5.2 #float dataype
+b = False  #Boolean datatype
+b = True  #Boolean datatype
+c = None # Null Dataype
+
+# We will see them later in datatype.
+
+# Knowing Type of stored value i.e Datatpe using type() function -
+
+name = "Shradha"
+age =  -25
+price = 25.99
+print (type(name) )
+print ( type( age) )
+print (type (price))
+
+
 
 #Keywords in Python : CHeck Videos of Table LIsts.(There area round 33 reserved keywords. )
 
 # Examples : To check which one is valid or invalid varaibles names.
 
 
-# Examples : Let' store some values in variables -
-
-
-name = "Isha" #string datatype
-roll_number = 17 #integer datatype
-percentage = 95.8 #float datatype
-is_student = True #Boolean datatype
-age = 23
 
 
 

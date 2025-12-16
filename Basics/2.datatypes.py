@@ -1,51 +1,104 @@
 '''
-#Python Datatypes : -
+# Python Datatypes/ Data Strutures : -  In Computer Science, In any Programming languges, Datatype or Data Struture can be divided into two types i.e a) Primitive Datatpes and Non-Primitive Datatypes where Non-Primitive DataTypes can be in two categories i.e built-in Dataypes and user-defined dataypes. 
+
+
+# 1) Primitive DataType or DataStruture : Primitive Data Structures are basic data structures provided by programming languages to store single values, such as integers, floating-point numbers i.e floats, complex number, strings, and booleans and None in python.
+
+2) Non-Primitive DataType/Abstract DataType or DataStructure : Abstract Data Structures are higher-level data structures that are built using primitive datatypes and provide more complex and specialized operations. Non-Primitive DataStructure doensot store single values, it stores the collection of values built using primitive datatypes. Such as List, Tuple, Set, Map.
+
+Some common examples of abstract data structures include arrays, linked lists, stacks, queues, trees, and graphs.
+
+
+
+Non-primitive data structures can further be categorized into two categories:
+
+ a) Built-In: Python offers implicit support for built-in structures that enable storing and accessing data e.g. lists, tuples, sets, and dictionaries.
+
+ Buit-In Data structure are those which comes with python programming lang we do not need to use any external module.
+
+ b) User-Defined: Python also provides the functionality to create your own data structures e.g. Stack, Queue, Array, LinkeList, Hashmap, Tree, Graph. so that you can have full control over their functionality.
+
+User-defined Data structure are those which doesnot comes with python programming lang we need to either require externally or make it.
+
+Note : We will mainly study, Built-in Non-Pr Daatstruture and UserDefined Daat struture in the DSA series.
+
+
+
+
+
 
                 Python DataTypes
                         |
-Numeric      Mapping     Set     SequenceType   Boolean  None                   
-               |
-      Dictionaries                     |
-                                    a)Strings
-                                    b)List 
-                                    c) Tuple
-|a)Integer
-b) Float
-c) Complex
+Numeric   SequenceType   Boolean  None   Map/Dictionary   Set                   
+   |            |
+a)Integer    a)Strings
+b) Float     b)List
+c) Complex   c)Tuple                                   
+                              
+
+-----------------------------------
+
+# Lets Study in details all Datatypes : -
 
 
-Overall, There are 10 Datatypes and more...
+1) Numeric Datatype : -
 
-
-
-#Numeric Datatype : a) Int --> 100, -5, 256 (all are whole number) 
-# b) Float : decimal numbers - 2.5, -1.8
+# a) Int --> +ve, -ve, 0 (25, -25, 0) ---> 100, -5, 256 (all are whole number) 
+# b) Float : decimal numbers --> 2.5, -1.8
 # c) Complex Number : 1+2j, 60+250j
 
+2) Boolean Datatype : contains boolean values i.e either True and False (Here, must T or F must be in capital character) 
 
-#Text Datatype : string ---> represented by single(' ') or double quotes(" ")(prefered for string defining)
+age = False (Remember F and T must be capital in Python programmijng)
 
-Boolean Datatype : contains boolean values i.e either True and False (Here, must T or F must be in capital character) 
+Also, When you compare two values, the expression is evaluated and Python returns the Boolean answer: as True or False -
 
-#Sequence Datatype : whenever we want to store  sequence of data or collection of data we use Sequence Datatypes like List or Tuple -
+Example :
 
-    a) List : It is define by square bracket[] and data stored in list are mutable i,e changable at run time means original data store in list can be changed later. We can store sequence of data or collection of any datatypes.
+print(10 > 9) #True
+print(10 == 9)  #False
+print(10 < 9) #False
+
+3) None Datatype : It is a special datatype when we do not want to store or assign any value to the variable. 
+e.g : a = None ----> 'a' variable doensot hold any value in it.
+
+NOte : MOst usecase of None Dataype whenever we want to nullify any alreADY stored data, we updata that variable with none datatype. 
+
+
+#None Datatypes : Special Datatype to nullify stored any data into variable.
+
+x = {2,3,4,5,1,4} #set datatype
+print(x)
+x= None #Intentionally nullifying the existing data stored in x
+print(x)
+
+
+
+4) Sequence Datatype  :-  whenever we want to store data in sequence like sequnce of character or numbers or collection of data we use Sequence Datatypes like string, List, Tuple -
+
+# a) string : It is use to store sequence of charaters or words enclosed inside single(' ') or double(' ') or triple(''' ''') quotes, But string preferred to write in double quotes -
+
+        "pralash"
+        "prajsh is good"
+        'ram'
+
+ b) List : It is define by square bracket[] and data stored in list are mutable i,e changable at run time means original data store in list can be changed later. We can store sequence of data or collection of any datatypes.
 
 sequence of integers -- [1,2,3,4]  --->   can be change later.
 sequence of strings --> ["lis", "pia", "dia"]  ---> can be change later.
 
 
-    b) Tuple :  It is also collection of items ie any datatypes. Here, We use curly bracket() to define a Tuple which is not mutuable data i.e immutable means data can not be modify later on or at run time in any stages remember.
+ c) Tuple :  It is also collection of items ie any datatypes. Here, We use curly bracket() to define a Tuple which is not mutuable data i.e immutable means data can not be modify later on or at run time in any stages remember.
 
-    Example : (2,1,3,3,2) ("wow", "hey", "good")   ---> can't be change later.
+Example : (2,1,3,3,2) ("wow", "hey", "good")   ---> can't be change later.
 
 
-#Set datatype : It is un-ordereded collection of unique items, define using curly braces {}
+ 5) Set datatype : It is un-ordereded collection of unique items, define using curly braces {} -
 
 fruits = {"apple", "banana", "cherry}
 
 
-#Mapping Datatype : It has dictionary datatype where we store key-value pairs. It is define using curly braces{} with assignment operator to define a dictionary corresponding to the variable or indentifier.
+ 6) Map Datatype : It has dictionary datatype where we store key-value pairs. It is define using curly braces{} with assignment operator to define a dictionary corresponding to the variable or indentifier.
 
 Ex: storing a student data as key-value pair -
 
@@ -63,7 +116,6 @@ Here, student1 and student2 are dictionary datatypes.
 
 
 
-#None Datatype : It is special datatype where we store no value in variable i.e nothing then we use it. MOst use-case whenever we want to nullify any store data, we updata that variable with none datatype. It is represnt null value.
 
 
 

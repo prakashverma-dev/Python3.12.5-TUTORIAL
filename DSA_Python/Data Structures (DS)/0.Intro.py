@@ -1,32 +1,11 @@
-""" 
-
-#What is DSA In Programming Language :-
-
-Data Structures and Algorithms (DSA) is a fundamental part of Computer Science that teaches us how to think and solve complex problems systematically.
-
-It the backbone for solving difficult problems efficiently with best possible solution with optimizing time complexicity and space complexcity of the problem. 
-
-Using the right data structure and algorithm makes our program run faster, especially when working with lots of data.
-
-
-Learning Data Structures and Algorithms(DSA) is not specific to any programming language, i.e DSA is indepenent of programming language, you can do/learn DSA in any follwoing programming languages: Python, C, C++, Java,JavaScript.
-
-
-
--------------------------------------------------------------------------------
+'''
+                            w3school(NOT TO NOTE )
 
 ## What is Data Structure : Data Struture refers to the way 'how data is stored, organized, and managed in different strutures with efficient manner and accessing them as and when required. 
 
 It can includes built-in types like lists, tuples, sets, and dictionaries, which help in handling data efficiently as well as user-defined data structures like tree, graph, queue, etc.
 
 Data Storage, organization, accessibility and efficiency are at major factors of storing data.
-
-
-How to Choose Which Which Data Struture is best to store data :  we store data depending on what data we have, uses and what we want to do with it. Suppose, We want to store data about a family, then we choose Tree Datastructure to store their data as per family tree like granfather, grandmother, father, moth etc. like family hirachy tree.
-
-
-
------------------------------------------------------------------------
 
 
 ## What is Algorithms :-  Algorithms is the way of working with data and 'how to solve different problems, often by searching through and manipulating data structures.
@@ -85,3 +64,14 @@ c) For Average case : Theta(Thetha sign)
 
 """
 
+
+
+
+
+
+
+
+
+
+
+'''

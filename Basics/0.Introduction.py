@@ -224,10 +224,14 @@ print("Hey Rowdy", "5")  # works with one space added
 print("My name is"+name+"and roll number is", roll_number)
 print("I scored", percentage, "% in exam, My overall score is", is_student)
 
-# 8. Printing two print statement values in same line with space added, end=" " argument -(end="\n" by default it is next line)
+
+# 8. Printing two print statement values in same line with space added using end=" " -(by default, it takes end="\n" which is next line)
 
 print("My name is"+name+"and roll number is", roll_number, end=" ")
 print("I scored", percentage, "% in exam, My overall score is", is_student)
+
+print("Prakash is a good boy.", end=" ")
+print("He likes to study")
 
 
 # 9. Printing Python expression/variables mixing up with 'string' using 'formatted string or f-string/F-string -
@@ -238,8 +242,12 @@ print("I scored", percentage, "% in exam, My overall score is", is_student)
 # To use formatted string literals : Begin a string with f or F and then string any single/double/thriple quotes then mix up string text with variables or Python expression, where variable/Python Expression while mixing up with string must be surrounded with curly braces{} and finally ends the string with single/double triple quotes. Rememeber, This always returns a string as whole string literal mix-up.
 
 
+x = f"Ram is good at math {4+5}"
+print(x) # Ram is good at math 9
+print(type(x))  # <class 'str'>
+
 # Ex1 : 
-first = "Prakash"
+first = "Prakash" 
 last = "Verma"
 age = 24
 

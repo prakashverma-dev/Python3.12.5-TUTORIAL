@@ -102,11 +102,12 @@ if "model" in thisdict:
 
 # Access using key
 print(phones[5])
-print(phones["John"])
+print(phones["model"])
 
 # OR, # Access using get()
 print(phones.get(5))
-print(phones.get("John"))
+print(phones.get("model"))
+print(phones.get("category", "luxury")) # if category key doesnot exist assign it value as "luxury"
 
 
 # 3. To access all keys and values seperately and in pairs from dictionary : -

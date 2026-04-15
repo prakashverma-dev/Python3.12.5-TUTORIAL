@@ -81,6 +81,29 @@ myfunc()
 print(x) # 200 as local variable x = 200, converted to global variable and value of x get updated.
 
 
+# Second USe of Global keyword : When we want to update the immutable object from global scope to local scope, then we need to make that local scope variable to global, ex -
+
+
+count = 1
+def x():
+    count = count + 1 # canot update as 'count' will not get from global scope
+    print(count)  # UnboundLocalError: cannot access local variable 'count' where it is not associated with a value
+
+x()
+print(count) # 1 
+
+# Solution - make 'that' local variable to global variable
+#Note : Disadvantage is that now that local variable will get access outside the function scope. ALter!!
+count = 1
+def x():
+    
+    global count
+    count = count + 1 # canot update as 'count' will not get from global scope
+    print(count)  # 2
+
+x()
+print(count) # 2
+
 
 #Local Scope or Local Variable : A variable created inside a function belongs to the local scope and that variable known as local variable to the function, and that local variable or function variable only accesible within the function. Remembver, it can't accessible outside of function i.e out side of local scope. Ex1: 
 
@@ -141,47 +164,15 @@ myfunc()
                             #Topic - 3
 
 #BeforeHand Need Concept of Mutuable Objects and Immutable Objects In Python-
-'''
+            
 
-In Python, objects are either mutable or immutable, depending on whether their content (state) can be changed after creation.
 
-Immutable Objects
-These objects cannot be changed after they are created. Any operation that alters their value results in a new object.
 
-Common immutable types:
 
-int – e.g., a = 5
 
-float – e.g., b = 3.14
 
-complex – e.g., c = 1 + 2j
 
-bool – e.g., flag = True
 
-str – e.g., name = "Alice"
-
-tuple – e.g., t = (1, 2, 3)
-
-frozenset – e.g., fs = frozenset([1, 2, 3])
-
-bytes – e.g., b = b"hello"
-
-Mutable Objects
-These objects can be modified after creation, without changing their identity.
-
-Common mutable types:
-
-list – e.g., lst = [1, 2, 3]
-
-dict – e.g., d = {"key": "value"}
-
-set – e.g., s = {1, 2, 3}
-
-bytearray – e.g., ba = bytearray(b"abc")
-
-Most user-defined classes (unless made immutable by design).
-
-'''                            
 
 # 'Pass by Reference and Pass by Value' Into Function Argument : -   
 

@@ -250,9 +250,9 @@ class Example:
 # Example : -
 
 # Normal Function - (To add two numbers)
-def func(a,b): return a+b
+def sum(a,b): return a+b
 
-print(func(2,6))
+print(sum(2,6))
 
 # Lambda Function or Anonymous Function or Function Expression (To add two numbers) -
 holding = lambda a,b: a+b
@@ -269,22 +269,159 @@ print(x(5, 6, 2))
 # Lambda function mostly can be use with higher oder function in python like map(), filter(), sorted() function which all expect first arg as 'a function' and second arg as 'sequence_iteratable_object', Example -
 
 
-# Multiply each item in list with 2 -
-
-my_list = [3,5,6,7,2]
-
-result = map(lambda item : item*2, my_list) #map() function executes a specified function for each item in an iterable.
-print(list(result)) #convert the map into a list, for readability.
 
 
-# Filter List Items based on a condition (like even no only, greter than 2 etc)
 
-my_list2 = [3,5,6,7,2, -3, -10]
-result2 = filter(lambda item : item % 2 == 0, my_list2) #Return only the Even Number
-print (list(result2))
+# map() function : - map() function is inbuilt-function in python used for iterating over each item in a iterable object to perform some task with providing a classic function/lambda function which executes for each item present in the iterable object and in result returns a spreaded values for each iterable object. Also, we can make map() to convert into list to use it later.
 
-result3 = filter(lambda item : item >= 0, my_list2) #Return only positive nummbers.
-print (list(result3))
+# syntax : map(function, iterables) ; 
+
+# Here, function --> Required. The function to execute for each item
+# iterable -->	Required. A sequence, collection or an iterator object. You can send as many iterables as you like, just make sure the function has one parameter for each iterable.
+
+
+'''
+
+# Classic Function and Lambda Function Working : -
+# Sum of two number -
+def sum(a,b):
+    return a + b
+
+print(sum(5,6))
+
+# using lambda function -
+sum = lambda a,b : a+b
+print(sum(4,2))
+
+'''
+
+
+# i) Example1 :  Multiply each item of list with 2 / Double all numbers in a list :-
+
+#a) using classic function with map -
+def multiply(item):
+  return item*2
+
+x,y,z,o = map(multiply, [2,4,6,8]) 
+print(x, type(x))
+print(x, type(y))
+print(x, type(z))
+print(x, type(o)) 
+
+# Or, Use list to convert -
+resultList = list( map(multiply, [2,4,6,8]) )
+print(resultList)
+
+# b) using map with lambda function -
+x = list(map(lambda item: item*2, [5,3,2] ))
+print(x)
+
+
+# ii) Example2 : Converting each item of list to integer from string -
+strList = ["2", "4", "9"]
+finalList = list(map(int, strList))
+print(finalList)
+print(type(finalList[0]))
+
+# iii) Example3 : Calculate the length of each word in the tuple -
+
+a,b,c = map(
+  lambda item : len(item),
+  ('apple', 'banana', 'cherry')
+   )
+
+print(a,b,c)
+
+# iv) Example4: Converting List strings to Uppercase -
+fruits = ['apple', 'banana', 'cherry']
+upper_fruits = list(map(
+  lambda item : item.upper(),
+  fruits
+))
+print(upper_fruits)
+
+# OR,
+fruits = ['apple', 'banana', 'cherry']
+res = list(map(str.upper, fruits) ) # str.upper method is applied to each element in the list.
+print(res)
+
+# v) Example5 : extract first character from each string in a list -
+words = ['apple', 'banana', 'cherry']
+charsList = list(map(
+  lambda item : item[0],
+  words
+))
+print(charsList)
+
+# vi) Example6 : Extracting first character from strings -
+sentence = " My Name is prakash Kumar Verma, I'm 24 years old. "
+
+sentenceList = sentence.strip().split(" ")
+firstCharStrn = list(map(
+  lambda item : item[0],
+  sentenceList
+))
+
+print(firstCharStrn)
+
+# vii) Example7 : Remove whitespaces from each string from list -
+s = ['  hello  ', '  world ', ' python  ']
+resut = list(map(
+  lambda item : item.strip(),
+  s
+))
+
+print(resut)
+
+
+# viii) Example8: Calculate fahrenheit from celsius list data -
+celsius = [0, 20, 37, 100]
+fahrenheit = list(map(
+  lambda item : (item * 9/5) + 32,
+  celsius
+))
+print(fahrenheit)
+
+# Note : c = (c * 9/5) + 32 converts each Celsius temperature to Fahrenheit using standard formula.
+
+
+# filter() : It is also same like map() function but it uses mostly with when we want to filter out some data from our iteratable obejct with putting up some condition for each iterable obeject item and it also returns result as spraded data seperated with comma or we can store it into list with typecasting list() -
+
+# Usecase :  Filter List Items based on a condition like even no only, greter than 2 etc.
+
+# Example : Filter out even numbers from a list (we use lambda with map here, user can use normal function as well with map) -
+arayData = [4,19, 3, 4, 3, 7, -2, 0]
+resultOddList = list(
+    filter(
+      lambda item : item%2 != 0,
+      arayData
+    )
+)
+print(resultOddList) 
+
+# Example : Filter out only Positive numbers from list items -
+arayData2 = [4, -19, 3, 4, 3, 7, -2, 0, -54]
+positiveList = list( filter(
+  lambda item : item>0,
+  arayData2
+))
+
+print(positiveList)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

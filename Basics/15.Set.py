@@ -18,8 +18,21 @@ e) Any Datatpe and Mix of Different Datattpes : We can define any type of dataty
 '''
 #1. Creating a Set : Sets are written with curly brackets.
 
+# a) creating empty set with set() constructor, as myset = {} will create dictionary untill one element is not added so far
+mynset = set()
 
-#a) using adding items to set -
+print(type(mynset)) # <class 'set'>
+
+# To add element into set 
+mynset.add(4)
+mynset.add(6)
+mynset.add(-1)
+mynset.add(12)
+
+print(mynset) # {4, 12, 6, -1} # set is unordered.
+
+
+# b) using adding minimum one item to set -
 myset= {'Doe', 'John', 'May'}
 print(myset) # {'John', 'Doe', 'May'}  -- ORder didnot maintain
 print(type(myset)) # <class 'set'>
@@ -27,7 +40,7 @@ print(type(myset)) # <class 'set'>
 # Note: Sets are unordered, so you cannot be sure in which order the items will appear.
 #Note: Also, Once a set is created, you cannot change its items, but you can remove items and add new items.
 
-#b) using set() construtor - to convert any iterable object into set -
+#c) using set() construtor - to convert any iterable object into set -
 
 thisset = set(("apple", "banana", "cherry")) 
 print(thisset) # {'cherry', 'apple', 'banana'}

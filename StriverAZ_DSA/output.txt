@@ -1,0 +1,4 @@
+Prakash Verma <class 'str'>
+5 <class 'int'>
+600000.45 <class 'float'>
+True <class 'bool'>

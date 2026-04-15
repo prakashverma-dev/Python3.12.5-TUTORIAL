@@ -7,7 +7,6 @@
 # Syntax:  round(number, digits) # Default digit arg is round-off to zero decimal place.
 
 
-import math
 print(round(5.76543, 2))  # 5.77 --> round off to two decimal place
 print(round(5.76543))  # 6  --> round off to zero decimal place.
 print(round(2.234))  # 2

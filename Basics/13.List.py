@@ -3,7 +3,7 @@
 '''
 #Python Collections(Arrays) : There are four collection data types in the Python programming language:
 
-1. List : It is a collection which is ordered and changeable. Allows duplicate members.
+1. List : It is a collection which is ordered and changeable. Allows duplicate members. 
 2. Tuple : It is a collection which is ordered and unchangeable. Allows duplicate members.
 3. Set : Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
 4. Dictionary : Dictionary is a collection which is ordered** and changeable. No duplicate members.
@@ -53,8 +53,14 @@ print(len(fruits))
 
 #b) with empty list - Then later add the items using assignment operartor or list method.
 wow = [] 
-wow.append("w") # Wow[0] = "w"
+wow.append("w") # wow[0] = "w" does not work here in python as python consider none indexed assigned as empty list. Either create list with size or use .append() to assign after empty list creation.
 print(wow)
+
+# create list with size -
+wow = [None] * 3   # creates list with max element size to assign later.
+wow[0] = "w"
+wow[2] = "k"
+print(wow)  # ['w', None, 'k']
 
 # NOte : 'list' object supports item assignment coz of 'mutuable' items(changable items) whereas 'tuple' object doesnot support item assignment coz tuple items is immutable i.e unchangable.
 
@@ -122,7 +128,7 @@ print(my_list3)
 #4. Adding Elements to a list : - We can add elements to a list using the following methods: -
 
 # append(<single_value>) --> It is list method only and It use to add only one specified item to the end of list. i.e this method takes only one argument could be any datatype(string, number, object etc.)
-# insert(<at_index>, <item>) --> To insert one or more items at/from the particular index in the main list by keeping old items with indexing get changed.
+# insert(<at_index>, <item>) --> To insert an item at specified index in the main list by keeping old items where indexing get changed.
 # extend(<iterable_object>) -->To merge another list or iterable object (list, set, tuple, etc.) to the end of the main list, we use extend() method.
 
 # Example : -
@@ -133,10 +139,6 @@ IPL = ["CSK", "MI", "RCB"]
 IPL.append("PUNJAB")
 print(IPL)  # ["CSK", "MI", "RCB", "PUNJAB"]
 
-a = ["apple", "banana", "cherry"]
-b = ["Ford", "BMW", "Volvo"]
-a.append(b)
-print(a) # ['apple', 'banana', 'cherry', ['Ford', 'BMW', 'Volvo']]
 
 #Adding an element to '2' Index using insert -
 IPL.insert(2,"Dev")
@@ -324,6 +326,8 @@ num = [5, -1, 0, 24, 45, 2, 1]
 num.sort()
 print(num) #[-1, 0, 1, 2, 5, 24, 45]
 
+# sorted(<provide_arr>): It returns a new array; doesnot mutate the exitsing array i.e doensot change existing array.
+
 # b) Descending Order : -
 
 fruit.sort(reverse= True)
@@ -342,6 +346,8 @@ print(num) # [1, 2, 45, 24, 0, -1, 5]
 thislist = ["banana", "Orange", "Kiwi", "cherry"]
 thislist.reverse()
 print(thislist) # ['cherry', 'Kiwi', 'Orange', 'banana']
+
+# reversed(<provide_arr>) : it returns a new array; doesnot mutate the exitsing array i.e doensot change existing array.
 
 
 # 10. Copy a list : - You can use the built-in List method copy() to copy a list.
@@ -408,6 +414,33 @@ print(myfruit)   #   ['banana', 'apple', ['kiwi', 'papaya'], 'cherry']
 
 # Want to access 'kiwi' item -
 print(myfruit[2][0])  # kiwi
+
+
+
+# 13.  clear(), index(), count(), reverse(), sort(), max(), min(), sum() 
+
+# a) clear() - 	Removes all the elements from the list and returns an empty list []
+
+fruits = ['apple', 'banana', 'cherry', 'orange']
+
+fruits.clear() # []
+
+print(fruits) 
+
+# b) index() - Returns the index of the first occurance of specified element.
+
+ar = [5, 10, 20, 30, 10, 5, 1]
+print(ar.index(10)) #1 
+
+# c) count() - Returns the no of times occurance of specified element i.e "frequency of specified element". If not present returns 0.
+
+ar = [5, 10, 20, 30, 10, 5, 1]
+print(ar.count(5))  #2
+print(ar.count(30))  #1
+print(ar.count(10))  #2
+print(ar.count(0))  #0
+
+
 
 
 

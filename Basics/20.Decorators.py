@@ -1,4 +1,14 @@
 
+# What is Decorator In Python ?
+
+# A Decorator is just a function that takes another function as an argument and add some kind of functionality and then returns another function. All of this without altering the source code of the original function that you passed in.
+
+# We write write decorator function with @ 
+
+
+
+
+
 # Uses of Decorators in Python OOPs : -
 
 # i) @staticmethod decorator : To make any method static which works something like where we do not need to access any object attributes or change instance attribute coz we do not specify self paramter in it.
